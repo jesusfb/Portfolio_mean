@@ -1,0 +1,19 @@
+@import url("reset.css");
+
+:root {
+  --primary-color: #111827;
+  --white: #fff;
+}
+
+html {
+  box-sizing: border-box;
+  color: var(--white);
+  background-color: var(--primary-color);
+  font-family: "Poppins", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
