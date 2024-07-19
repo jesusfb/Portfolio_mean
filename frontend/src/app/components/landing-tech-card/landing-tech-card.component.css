@@ -1,0 +1,61 @@
+* {
+  outline: 1px solid blue;
+}
+
+.landing-tech-card {
+  position: relative;
+
+  >div {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    >img {
+      object-fit: cover;
+    }
+  }
+
+  >h3 {
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  >hr {
+    position: absolute;
+    bottom: 0;
+    height: 55%;
+    width: 100%;
+    z-index: -1;
+    outline: none;
+    border: 0;
+    margin: 0;
+    background-color: var(--primary-color-50);
+  }
+}
+
+@media (width >=992px) {
+  .landing-tech-card {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 3rem;
+    padding-left: 3rem;
+
+    >div {
+      position: relative;
+      width: 30%;
+      bottom: 3rem;
+      margin: 0;
+    }
+
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+
+    >hr {
+      height: 100%;
+      left: 0;
+    }
+  }
+}
