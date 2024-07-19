@@ -1,0 +1,9 @@
+.link {
+  display: block;
+  width: 100%;
+  font-size: var(--btn-fs);
+  color: var(--white);
+  text-align: center;
+  text-decoration: none;
+  padding: var(--btn-padding);
+}

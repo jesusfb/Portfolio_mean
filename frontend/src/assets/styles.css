@@ -1,19 +1,79 @@
 @import url("reset.css");
 
 :root {
-  --primary-color: #111827;
+  /** COLORS **/
+  --primary-color-100: #111827;
+  --primary-color-50: #1F2937;
   --white: #fff;
+  /** PADDINGS **/
+  --container-padding-x-sm: 1.5rem;
+  --container-padding-x-md: 14rem;
+  --container-padding-y-sm: 7.2rem;
+  --container-padding-y-md: 7.2rem;
+  --navbar-padding-sm: var(--container-padding-x-sm) 2rem;
+  --navbar-padding-lg: var(--container-padding-x-sm) 5rem;
+  --btn-padding: 1rem 2rem;
+  --btn-fs: 1.6rem;
 }
 
 html {
   box-sizing: border-box;
   color: var(--white);
-  background-color: var(--primary-color);
-  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color-100);
+  font-family: Arial, Helvetica, sans-serif;
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  /* 1rem = 10px */
+  font-size: 1.6rem;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+/** SPACING **/
+.landing-section,
+section {
+  padding: var(--container-padding-y-sm) var(--container-padding-x-sm);
+}
+
+@media (width >=768px) {
+  .landing-section {
+    padding: var(--container-padding-y-md) var(--container-padding-x-md);
+  }
+}
+
+/** FONTS **/
+h1 {
+  font-size: 5.6rem;
+}
+
+h2 {
+  font-size: 4.5rem;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+
+@media (width >=768px) {
+  h1 {
+    font-size: 5.6rem;
+  }
+}
+
+/** UTILITIES **/
+.gradient-bottom {
+  background: rgb(31, 41, 55);
+  background: linear-gradient(0deg, rgba(31, 41, 55, 1) 0%, rgba(31, 41, 55, 0.49576327112876406) 20%, rgba(255, 255, 255, 0) 100%);
+}
+
+.bg-primary-50 {
+  background-color: var(--primary-color-50);
 }

@@ -1,0 +1,126 @@
+.landing-section {
+  height: 100vh;
+  text-align: center;
+}
+
+.hero {
+  position: relative;
+
+  >.hero__me {
+    aspect-ratio: 1/1;
+    width: 50%;
+    max-width: 25rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 5rem auto;
+
+    >img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  >.hero__info {
+    >p {
+      margin-top: 2rem;
+    }
+
+    >.info__icons {
+      position: absolute;
+      width: calc(100% - var(--container-padding-x-sm) * 2);
+      bottom: 5rem;
+      display: flex;
+      justify-content: space-between;
+
+      >a {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+
+        >.icon {
+          position: relative;
+          width: 6.8rem;
+          height: 6.8rem;
+          border-radius: 50%;
+
+          >svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        >span {
+          display: block;
+          max-width: fit-content;
+        }
+      }
+    }
+  }
+}
+
+@media (width >=768px) {
+  .hero {
+    >.hero__info {
+      >.info__icons {
+        width: calc(100% - var(--container-padding-x-md) * 2);
+      }
+    }
+  }
+}
+
+@media (width >=1200px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14rem;
+    text-align: start;
+
+    >.hero__me {
+      margin: 0;
+      max-width: 30%;
+    }
+
+    >.hero__info {
+      max-width: 50rem;
+
+      >p {
+        margin-bottom: 2rem;
+      }
+
+      >.info__icons {
+        position: relative;
+        bottom: initial;
+        width: 100%;
+      }
+    }
+  }
+}
+
+/*
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  >.hero__me {
+    aspect-ratio: 1/1;
+    width: 35%;
+    border-radius: 50%;
+    overflow: hidden;
+
+    >img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  >.hero__info {
+    width: 38%;
+  }
+}
+  */
