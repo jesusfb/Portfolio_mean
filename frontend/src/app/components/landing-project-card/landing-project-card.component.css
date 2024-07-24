@@ -13,12 +13,15 @@
   }
 
   >.landing-project-card__content {
-    >img {
+    >.content__img {
       height: 20rem;
-      object-fit: cover;
+
+      >img {
+        object-fit: cover;
+      }
     }
 
-    >div {
+    >.content__text {
       margin-top: 1rem;
       display: flex;
       flex-direction: column;
@@ -30,6 +33,33 @@
         -webkit-line-clamp: 6;
         -webkit-box-orient: vertical;
         overflow: hidden;
+      }
+    }
+  }
+}
+
+@media (width >=992px) {
+  .landing-project-card {
+
+    >.landing-project-card__date {
+      justify-content: start;
+    }
+
+    >.landing-project-card__content {
+      display: flex;
+      gap: 3rem;
+
+      >.content__img {
+        width: 100rem;
+        height: auto;
+        max-height: 23.6rem;
+      }
+
+      >.content__text {
+        margin: 0;
+        justify-content: space-between;
+        text-align: start;
+        align-items: start;
       }
     }
   }
