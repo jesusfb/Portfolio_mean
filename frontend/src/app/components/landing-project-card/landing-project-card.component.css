@@ -1,0 +1,36 @@
+.landing-project-card {
+  >.landing-project-card__date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    >svg {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+  }
+
+  >.landing-project-card__content {
+    >img {
+      height: 20rem;
+      object-fit: cover;
+    }
+
+    >div {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      >p {
+        display: -webkit-box;
+        line-clamp: 6;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+  }
+}

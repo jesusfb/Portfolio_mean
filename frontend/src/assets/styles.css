@@ -45,7 +45,7 @@ section,
 .landing-section {
 
   >h2,
-  p {
+  >p {
     max-width: 50rem;
     margin-left: auto;
     margin-right: auto;
@@ -85,6 +85,11 @@ h3 {
 p {
   font-size: 1.8rem;
   line-height: 3rem;
+}
+
+.caption-text {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
 }
 
 /** UTILITIES **/

@@ -52,10 +52,6 @@
   }
 }
 
-* {
-  outline: 1px solid red;
-}
-
 .skills {
   height: fit-content;
 
@@ -64,6 +60,20 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+}
+
+.experience {
+  >ul {
+    margin-top: 4rem;
+
+    >li {
+      margin-bottom: 4rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
