@@ -1,4 +1,5 @@
 .link {
+  position: relative;
   display: block;
   width: 100%;
   font-size: var(--btn-fs);
@@ -6,4 +7,25 @@
   text-align: center;
   text-decoration: none;
   padding: var(--btn-padding);
+  transition: color .3s ease-in-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--highlight-color-100);
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+  &:hover {
+    color: var(--highlight-color-100);
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
 }
