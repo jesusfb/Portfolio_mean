@@ -53,13 +53,6 @@ section,
   }
 }
 
-.icons-group {
-  display: flex;
-  justify-content: space-between;
-  max-width: 55rem;
-  margin: 2rem auto 0 auto;
-}
-
 section {
   padding: var(--container-padding-y-sm) var(--container-padding-x-sm);
 }
