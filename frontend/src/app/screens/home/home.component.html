@@ -1,0 +1,58 @@
+<section id="landing-inicio" class="hero gradient-bottom">
+  <div class="hero__me">
+    <img class="max-img" src="me.png" alt="Fotografía de Angel Maldonado">
+  </div>
+  <div class="hero__info">
+    <h1>Hola 👋, soy Angel Maldonado</h1>
+    <p>Ingeniero en sistemas inteligentes especializado en IA para web y apps móviles.</p>
+    <div class="info__icons">
+      <app-landing-icon-link text="GitHub" icon="github" href="https://github.com/AngelMaldonado" />
+      <app-landing-icon-link text="Blog" icon="blog" href="#" />
+      <app-landing-icon-link text="CV" icon="cv" href="CV_AngelMaldonado-ES.pdf" [download]=true />
+      <app-landing-icon-link text="Contacto" icon="contact" href="#" />
+    </div>
+  </div>
+</section>
+
+<section id="landing-sobre-mi" class="landing-section bg-primary-50">
+  <h2>Sobre mi</h2>
+  <p>
+    Más allá de la programación, me fascina descubrir cómo la innovación
+    puede mejorar nuestras vidas cotidianas. Siempre estoy buscando nuevos desafíos que me permitan seguir aprendiendo y
+    creciendo en este emocionante campo tecnológico.
+  </p>
+</section>
+
+<section id="landing-habilidades" class="skills landing-section gradient-top vh-100">
+  <h2>Habilidades</h2>
+  <p>Además de estas habilidades, tengo experiencia trabajando en equipo siguiendo la metología SCRUM.</p>
+  <div class="skills__container">
+    <app-landing-tech-card />
+    <app-landing-tech-card />
+    <app-landing-tech-card />
+    <app-landing-tech-card />
+    <app-landing-tech-card />
+    <app-landing-tech-card />
+  </div>
+</section>
+
+<section id="landing-proyectos" class="experience landing-section gradient-bottom">
+  <h2>Experiencia</h2>
+  <p>Estos son algunos de los proyectos universitarios y personales en los que trabajé.</p>
+  <ul>
+    <li><app-landing-project-card /></li>
+    <li><app-landing-project-card /></li>
+    <li><app-landing-project-card /></li>
+    <li><app-landing-project-card /></li>
+  </ul>
+</section>
+
+<section id="landing-contacto" class="landing-section bg-primary-50">
+  <h2>Contacto</h2>
+  <p>Envíame un correo o contáctame por Linkedin o WhatsApp</p>
+  <nav class="icons-group">
+    <app-landing-icon-link text="Correo" icon="mail" href="mailto:" />
+    <app-landing-icon-link text="WhatsApp" icon="whatsapp" href="https://wa.me/" />
+    <app-landing-icon-link text="Linkedin" icon="linkedin" href="https://www.linkedin.com/in/angel-maldonado/" />
+  </nav>
+</section>

@@ -1,0 +1,66 @@
+.landing-project-card {
+  >.landing-project-card__date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    >svg {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+  }
+
+  >.landing-project-card__content {
+    >.content__img {
+      height: 20rem;
+
+      >img {
+        object-fit: cover;
+      }
+    }
+
+    >.content__text {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      >p {
+        display: -webkit-box;
+        line-clamp: 6;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+@media (width >=992px) {
+  .landing-project-card {
+
+    >.landing-project-card__date {
+      justify-content: start;
+    }
+
+    >.landing-project-card__content {
+      display: flex;
+      gap: 3rem;
+
+      >.content__img {
+        width: 100rem;
+        height: auto;
+        max-height: 23.6rem;
+      }
+
+      >.content__text {
+        margin: 0;
+        justify-content: space-between;
+        text-align: start;
+        align-items: start;
+      }
+    }
+  }
+}

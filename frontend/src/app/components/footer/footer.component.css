@@ -1,0 +1,8 @@
+footer {
+  padding: 1rem var(--container-padding-x-sm);
+  text-align: center;
+
+  >a {
+    color: inherit;
+  }
+}
