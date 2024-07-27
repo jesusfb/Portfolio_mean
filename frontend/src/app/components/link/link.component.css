@@ -21,11 +21,12 @@
     transition: transform .3s ease-in-out;
   }
 
-  &:hover {
+  &:hover,
+  &.active {
     color: var(--highlight-color-100);
   }
 
-  &:hover::before {
+  &:hover::before, &.active::before {
     transform: scaleX(1);
   }
 }

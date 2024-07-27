@@ -10,4 +10,12 @@ import { Component, Input } from '@angular/core';
 export class LinkComponent {
   @Input() href: string = '#';
   @Input() text: string = 'Link';
+  @Input() active: boolean = false;
+
+  scrollTo(section: string): void {
+    const element = document.querySelector(section);
+    if (element) {
+      element.scrollIntoView();
+    }
+  }
 }
