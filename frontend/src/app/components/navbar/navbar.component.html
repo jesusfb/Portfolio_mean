@@ -12,11 +12,17 @@
     </svg>
   </label>
   <ul>
+    @if (onLandingPage()) {
     <li><app-link href="#landing-inicio" text="Inicio" [active]=true /></li>
     <li><app-link href="#landing-sobre-mi" text="Sobre mí" /></li>
     <li><app-link href="#landing-habilidades" text="Habilidades" /></li>
     <li><app-link href="#landing-proyectos" text="Proyectos" /></li>
     <li><app-link href="#landing-contacto" text="Contacto" /></li>
     <li><app-link href="/blog" text="Blog" [toRoute]=true /></li>
+    } @else if (this.router.url == '/blog') {
+    <li><app-link href="/" text="Volver" [toRoute]=true /></li>
+    <li><app-link href="/admin" text="Admin" [toRoute]=true /></li>
+    <li><app-link href="/login" text="Login" [toRoute]=true /></li>
+    }
   </ul>
 </nav>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LinkComponent } from "../link/link.component";
+import { Router, Route } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,4 +11,9 @@ import { LinkComponent } from "../link/link.component";
 })
 export class NavbarComponent {
 
+  constructor(protected router: Router) { }
+
+  onLandingPage() {
+    return this.router.url.match(/^\/(#.*)?$/) ? true : false;
+  }
 }

@@ -1,3 +1,4 @@
-<a [class]="'link' + (active ? ' active' : '')" [href]="!toRoute ? href : null" [routerLink]="toRoute ? href : null" (click)="scrollTo(this.href)">
+<a [class]="'link' + (active ? ' active' : '')" [href]="!toRoute ? href : null"
+  [attr.routerLink]="toRoute ? href : null" (click)="!toRoute && href.startsWith('#') ? scrollTo(this.href) : null">
   {{text}}
 </a>
