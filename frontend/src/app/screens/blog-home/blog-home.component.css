@@ -17,24 +17,6 @@
     >input {
       margin: 2rem 0;
     }
-
-    >ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-
-      >li {
-        padding: 0.2rem 0.8rem;
-        background-color: var(--highlight-color-100);
-        border-radius: 2rem;
-
-        &:first-of-type,
-        &:last-of-type {
-          margin-right: 0;
-          margin-left: 0;
-        }
-      }
-    }
   }
 }
 

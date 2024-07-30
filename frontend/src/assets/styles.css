@@ -6,6 +6,8 @@
   --primary-color-50: #1F2937;
   --highlight-color-100: #EF4444;
   --white: #fff;
+  /** SIZES **/
+  --navbar-height: 7.2rem;
   /** PADDINGS **/
   --container-padding-x-sm: 1.5rem;
   --container-padding-x-md: 14rem;
@@ -54,18 +56,23 @@ section,
   }
 }
 
-section {
+section,
+.container {
   padding: var(--container-padding-y-sm) var(--container-padding-x-sm);
 }
 
 @media (width >=768px) {
-  section {
+
+  section,
+  .container {
     padding: var(--container-padding-y-md) var(--container-padding-x-md);
   }
 }
 
 @media (width >=1200px) {
-  section {
+
+  section,
+  .container {
     text-align: start;
   }
 }
@@ -117,4 +124,11 @@ p {
 
 .vh-100 {
   height: 100vh;
+}
+
+/** COMPONENTS **/
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
