@@ -1,0 +1,146 @@
+.post-navbar {
+  padding: 4rem var(--container-padding-x-sm) 0 var(--container-padding-x-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  >.button {
+    width: fit-content;
+  }
+}
+
+header {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+article {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  >figure {
+    height: 30rem;
+
+    >img {
+      object-fit: cover;
+    }
+  }
+
+  >.content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+hr {
+  margin: var(--container-padding-y-sm) var(--container-padding-x-sm)
+}
+
+.user-comment-form {
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+
+  >fieldset {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    >textarea {
+      resize: none;
+    }
+
+    >.stars {
+      margin: 0 auto;
+    }
+  }
+}
+
+.comments {
+  padding-top: 0;
+  text-align: center;
+
+  >ul {
+    >li {
+      text-align: start;
+      display: flex;
+      gap: 2rem;
+      margin: 2.8rem 0;
+
+      >.user-pic {
+        width: 5rem;
+        min-width: 5rem;
+        height: 5rem;
+      }
+
+      &:first-child,
+      &:last-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media (width >=768px) {
+  .post-navbar {
+    flex-direction: row;
+    align-items: center;
+    padding-left: var(--container-padding-x-md);
+    padding-right: var(--container-padding-x-md);
+  }
+
+  hr {
+    margin: var(--container-padding-y-md) var(--container-padding-x-md)
+  }
+}
+
+@media (width >=992px) {
+  .comments {
+    text-align: start;
+  }
+
+  .user-comment-form {
+    >.user-pic {
+      display: inline-block;
+    }
+
+    >fieldset {
+      position: relative;
+      transform: translateY(-25%);
+      margin-top: 0;
+      margin-left: 2rem;
+      width: 82%;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      >textarea {
+        resize: none;
+      }
+
+      >.stars {
+        margin: 0;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: 10rem;
+      }
+
+      >button {
+        position: absolute;
+        width: fit-content;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+}
+
+@media (width >=1200px) {
+  header {
+    >div {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+}

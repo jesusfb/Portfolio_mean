@@ -1,0 +1,74 @@
+<nav class="post-navbar navbar-on-top">
+  <a class="button" (click)="goBack()">Volver</a>
+  <ul class="badge-list">
+    <li><app-badge>etiqueta1</app-badge></li>
+    <li><app-badge>etiqueta1</app-badge></li>
+    <li><app-badge>etiqueta1</app-badge></li>
+    <li><app-badge>etiqueta1</app-badge></li>
+  </ul>
+</nav>
+<header class="container">
+  <h2>Título del post</h2>
+  <div>
+    <p>~ AngelMaldonado ~ Actualizado 28 de marzo de 2024</p>
+    <app-stars-rating />
+  </div>
+</header>
+<article class="container">
+  <figure>
+    <img class="max-img" src="https://placehold.co/600x400">
+  </figure>
+  <div class="content">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam at velit est, quis nihil unde sunt necessitatibus
+      ea cum quisquam nemo magni quam tempore, sed voluptas nobis deserunt mollitia quo.
+    </p>
+  </div>
+</article>
+<hr>
+<section class="comments">
+  <h3>Comentarios (xx)</h3>
+  <form class="user-comment-form">
+    <div class="user-pic">
+      <img class="max-img" src="https://placehold.co/600x400" alt="avatar">
+    </div>
+    <fieldset>
+      <label>Deja tu comentario</label>
+      <textarea title="Comentario" name="comment" cols="30" rows="10"></textarea>
+      <app-stars-rating class="stars" />
+      <button type="submit">Enviar</button>
+    </fieldset>
+  </form>
+  <ul>
+    <li>
+      <div class="user-pic">
+        <img class="max-img" src="https://placehold.co/600x400" alt="user-avatar#">
+      </div>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem iste deleniti placeat dolor, quod
+        incidunt unde maiores officiis necessitatibus odio explicabo minima. Veniam cum dolor voluptas excepturi
+        voluptatem quos iure.
+      </p>
+    </li>
+    <li>
+      <div class="user-pic">
+        <img class="max-img" src="https://placehold.co/600x400" alt="user-avatar#">
+      </div>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem iste deleniti placeat dolor, quod
+        incidunt unde maiores officiis necessitatibus odio explicabo minima. Veniam cum dolor voluptas excepturi
+        voluptatem quos iure.
+      </p>
+    </li>
+    <li>
+      <div class="user-pic">
+        <img class="max-img" src="https://placehold.co/600x400" alt="user-avatar#">
+      </div>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem iste deleniti placeat dolor, quod
+        incidunt unde maiores officiis necessitatibus odio explicabo minima. Veniam cum dolor voluptas excepturi
+        voluptatem quos iure.
+      </p>
+    </li>
+  </ul>
+</section>

@@ -17,24 +17,6 @@
     >input {
       margin: 2rem 0;
     }
-
-    >ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-
-      >li {
-        padding: 0.2rem 0.8rem;
-        background-color: var(--highlight-color-100);
-        border-radius: 2rem;
-
-        &:first-of-type,
-        &:last-of-type {
-          margin-right: 0;
-          margin-left: 0;
-        }
-      }
-    }
   }
 }
 
@@ -81,20 +63,6 @@
       align-items: center;
       justify-content: center;
     }
-  }
-}
-
-input {
-  padding: var(--btn-padding);
-  font: inherit;
-  font-size: var(--btn-fs);
-  border: none;
-  border-radius: 0.4rem;
-  outline: none;
-
-  &:focus {
-    outline: 3px solid var(--highlight-color-100);
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   }
 }
 
