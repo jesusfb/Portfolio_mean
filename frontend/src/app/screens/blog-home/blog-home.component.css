@@ -66,20 +66,6 @@
   }
 }
 
-input {
-  padding: var(--btn-padding);
-  font: inherit;
-  font-size: var(--btn-fs);
-  border: none;
-  border-radius: 0.4rem;
-  outline: none;
-
-  &:focus {
-    outline: 3px solid var(--highlight-color-100);
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-  }
-}
-
 @media (width >=992px) {
   .post-card {
     >.post-content {

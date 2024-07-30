@@ -4,6 +4,7 @@
   /** COLORS **/
   --primary-color-100: #111827;
   --primary-color-50: #1F2937;
+  --primary-color-10: #636f7f;
   --highlight-color-100: #EF4444;
   --white: #fff;
   /** SIZES **/
@@ -77,6 +78,38 @@ section,
   }
 }
 
+input,
+textarea {
+  padding: var(--btn-padding);
+  font: inherit;
+  font-size: var(--btn-fs);
+  border: none;
+  border-radius: 0.4rem;
+  outline: none;
+
+  &:focus {
+    outline: 3px solid var(--highlight-color-100);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  }
+}
+
+button,
+.button {
+  cursor: pointer;
+  padding: 1rem;
+  background-color: unset;
+  outline: none;
+  border: 2px solid var(--white);
+  color: inherit;
+  font-size: var(--btn-fs);
+  transition: color .3s ease, border-color .3s ease;
+
+  &:hover {
+    color: var(--highlight-color-100);
+    border-color: var(--highlight-color-100);
+  }
+}
+
 /** FONTS **/
 h1 {
   font-size: 5.6rem;
@@ -103,6 +136,10 @@ p {
 }
 
 /** UTILITIES **/
+.navbar-on-top {
+  margin-top: var(--navbar-height);
+}
+
 .gradient-bottom {
   background: rgb(31, 41, 55);
   background: linear-gradient(0deg, rgba(31, 41, 55, 1) 0%, rgba(31, 41, 55, 0.49576327112876406) 20%, rgba(255, 255, 255, 0) 100%);
@@ -131,4 +168,22 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+
+  >li {
+    line-height: 2.16rem;
+  }
+}
+
+.user-pic {
+  width: 10rem;
+  /*7.2rem;*/
+  height: 10rem;
+  /*7.2rem;*/
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+
+  >img {
+    object-fit: cover;
+  }
 }
