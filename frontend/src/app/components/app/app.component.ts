@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "../navbar/navbar.component";
 import { FooterComponent } from '../footer/footer.component';
@@ -28,7 +28,7 @@ export class AppComponent {
     sections.forEach((section: HTMLElement) => {
       if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
         navlinks.forEach((navlink: HTMLAnchorElement) => {
-          if (navlink.href.includes(section.id)) {
+          if (section.hasAttribute('id') && navlink.href.includes(section.id)) {
             navlink.classList.add('active')
           } else {
             navlink.classList.remove('active')

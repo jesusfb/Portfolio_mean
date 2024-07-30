@@ -1,1 +1,10 @@
-<a [class]="'link' + (active ? ' active' : '')" href={{href}} (click)="scrollTo(this.href)">{{text}}</a>
+@if (toRoute) {
+<a [class]="'link' + (active ? ' active' : '')" [routerLink]="href">
+  {{text}}
+</a>
+} @else {
+<a [class]="'link' + (active ? ' active' : '')" [href]="href"
+  (click)="href.startsWith('#') ? scrollTo(this.href) : null">
+  {{text}}
+</a>
+}
