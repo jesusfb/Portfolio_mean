@@ -1,0 +1,47 @@
+.user-info {
+  text-align: center;
+
+  >h2 {
+    margin-top: 2rem;
+
+  }
+
+  >button {
+    width: 100%;
+  }
+}
+
+section {
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    >.icon {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}
+
+@media (width >=992px) {
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    >.user-pic {
+      margin: 0;
+    }
+
+    >h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    >button {
+      width: fit-content;
+    }
+  }
+}

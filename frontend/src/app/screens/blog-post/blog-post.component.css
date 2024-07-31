@@ -1,5 +1,4 @@
 .post-navbar {
-  padding: 4rem var(--container-padding-x-sm) 0 var(--container-padding-x-sm);
   display: flex;
   flex-direction: column;
   gap: 2rem;
