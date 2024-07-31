@@ -9,5 +9,5 @@ import { LinkComponent } from '../link/link.component';
   styleUrl: './blog-post-card.component.css'
 })
 export class BlogPostCardComponent {
-  @Input({ required: true }) post!: Post
+  //@Input({ required: true }) post!: Post
 }

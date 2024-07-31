@@ -11,11 +11,12 @@ import { calendarIcon } from '../assets/svg/calendar';
 import { mailIcon } from '../assets/svg/mail';
 import { whatsappIcon } from '../assets/svg/whatsapp';
 import { linkedinIcon } from '../assets/svg/linkedin';
+import { saveIcon } from '../assets/svg/save';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideSvgIcons([githubIcon, blogIcon, contactIcon, cvIcon, calendarIcon, mailIcon, whatsappIcon, linkedinIcon])
+    provideSvgIcons([githubIcon, blogIcon, contactIcon, cvIcon, calendarIcon, mailIcon, whatsappIcon, linkedinIcon, saveIcon])
   ]
 };
