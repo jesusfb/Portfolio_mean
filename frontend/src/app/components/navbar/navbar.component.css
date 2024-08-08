@@ -3,31 +3,59 @@
   position: fixed;
   top: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--navbar-padding-sm);
+  padding: var(--navbar-padding);
   background-color: var(--primary-color-50);
 
-  >ul {
-    display: none;
+  >.toggler {
+    cursor: pointer;
+    float: right;
+
+    >svg path {
+      transition: transform .3s ease, color .3s ease;
+    }
   }
 
-  >.toggler {
-    >input {
+  >.toggler:hover,
+  &:has(input:checked),
+  &:has(input:focus) {
+    color: var(--highlight-color-100);
+  }
+
+  &:has(input:focus) .toggler>svg {
+    outline: var(--focus-outline);
+    border-radius: var(--focus-border-radius);
+  }
+
+  &:has(input:checked) .toggler>svg {
+    >path:nth-child(2) {
+      transform: rotate(45deg) translate(25%, -20%);
+    }
+
+    >path:nth-child(3) {
+      transform: rotate(-45deg) translate(-55%, 25%);
+    }
+
+    >path:nth-child(4) {
       display: none;
     }
   }
 
-  &:has(.toggler>input:checked) {
-    >ul {
-      width: 100%;
-      background-color: inherit;
+  input {
+    opacity: 0;
+  }
+
+  >ul {
+    overflow: hidden;
+    display: none;
+    width: 100%;
+    max-height: 0;
+    padding: inherit;
+    background-color: inherit;
+
+    &.expanded {
       display: block;
-      padding: inherit;
-      position: absolute;
-      top: 100%;
-      left: 0;
+      max-height: 1000px;
+      animation: appear 1s;
 
       >li {
         margin: 2rem 0;
@@ -44,18 +72,30 @@
   }
 }
 
+@keyframes appear {
+  from {
+    max-height: 0;
+  }
 
+  to {
+    max-height: 1000px;
+  }
+}
 
 @media (width >=992px) {
   .navbar {
-    padding: var(--navbar-padding-lg);
-
     >ul {
-      display: inline-block;
+      display: block;
+      width: max-content;
+      max-height: max-content;
+      position: relative;
+      float: right;
+      padding: .3rem 0 0 0;
+      overflow: visible;
 
       >li {
         float: left;
-        margin: 0 0;
+        margin: 0;
 
         &:first-child {
           margin-top: 0;

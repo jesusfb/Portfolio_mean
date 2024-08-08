@@ -7,6 +7,9 @@
   --primary-color-10: #636f7f;
   --highlight-color-100: #EF4444;
   --white: #fff;
+  /** BORDERS **/
+  --focus-outline: 1px solid var(--white);
+  --focus-border-radius: 2px;
   /** SIZES **/
   --navbar-height: 7.2rem;
   /** PADDINGS **/
@@ -14,10 +17,21 @@
   --container-padding-x-md: 14rem;
   --container-padding-y-sm: 7.2rem;
   --container-padding-y-md: 7.2rem;
-  --navbar-padding-sm: var(--container-padding-x-sm) 2rem;
-  --navbar-padding-lg: var(--container-padding-x-sm) 5rem;
+  --navbar-padding: var(--container-padding-x-sm) 2rem;
   --btn-padding: 1rem 2rem;
   --btn-fs: 1.6rem;
+}
+
+@media (width >=768px) {
+  :root {
+    --container-padding-x: 14rem;
+  }
+}
+
+@media (width >=992px) {
+  :root {
+    --navbar-padding: var(--container-padding-x-sm) 5rem;
+  }
 }
 
 html {

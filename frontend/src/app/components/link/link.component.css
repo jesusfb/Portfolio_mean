@@ -23,11 +23,14 @@
   }
 
   &:hover,
-  &.active {
+  &.active,
+  &:focus {
     color: var(--highlight-color-100);
   }
 
-  &:hover::before, &.active::before {
+  &:hover::before,
+  &:focus::before,
+  &.active::before {
     transform: scaleX(1);
   }
 }
