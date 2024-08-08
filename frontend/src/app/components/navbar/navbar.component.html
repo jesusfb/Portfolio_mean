@@ -1,8 +1,9 @@
-<nav class="navbar">
-  <img src="logo.svg" alt="logo" width="42" height="42">
-  <label class="toggler" title="Boton para despliegue de menu principal">
-    <input type="checkbox" title="toggler" />
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="36" height="36"
+<nav aria-label="Navegación principal" class="navbar">
+  <a href="/" aria-label="Logo de la página (ícono de elefante)">
+    <img src="logo.svg" alt="Ícono de elefante" width="42" height="42">
+  </a>
+  <label class="toggler" aria-label="Menu principal" for="main-nav-toggler">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="42" height="42"
       viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
       stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -11,18 +12,19 @@
       <path d="M4 18l16 0" />
     </svg>
   </label>
-  <ul>
+  <input type="checkbox" aria-label="Boton para despliegue de menu principal" id="main-nav-toggler" />
+  <ul [className]="this.expanded ? 'expanded' : ''" aria-label="Enlaces">
     @if (onLandingPage()) {
-    <li><app-link href="#landing-inicio" text="Inicio" [active]=true /></li>
-    <li><app-link href="#landing-sobre-mi" text="Sobre mí" /></li>
-    <li><app-link href="#landing-habilidades" text="Habilidades" /></li>
-    <li><app-link href="#landing-proyectos" text="Proyectos" /></li>
-    <li><app-link href="#landing-contacto" text="Contacto" /></li>
-    <li><app-link href="/blog" text="Blog" [toRoute]=true /></li>
+    <li aria-label="Enlace"><app-link href="#landing-inicio" text="Inicio" [active]=true /></li>
+    <li aria-label="Enlace"><app-link href="#landing-sobre-mi" text="Sobre mí" /></li>
+    <li aria-label="Enlace"><app-link href="#landing-habilidades" text="Habilidades" /></li>
+    <li aria-label="Enlace"><app-link href="#landing-proyectos" text="Proyectos" /></li>
+    <li aria-label="Enlace"><app-link href="#landing-contacto" text="Contacto" /></li>
+    <li aria-label="Enlace"><app-link href="/blog" text="Blog" [toRoute]=true /></li>
     } @else if (this.router.url == '/blog') {
-    <li><app-link href="/" text="Volver" [toRoute]=true /></li>
-    <li><app-link href="/admin" text="Admin" [toRoute]=true /></li>
-    <li><app-link href="/login" text="Login" [toRoute]=true /></li>
+    <li aria-label="Enlace"><app-link href="/" text="Volver" [toRoute]=true /></li>
+    <li aria-label="Enlace"><app-link href="/admin" text="Admin" [toRoute]=true /></li>
+    <li aria-label="Enlace"><app-link href="/login" text="Login" [toRoute]=true /></li>
     }
   </ul>
 </nav>
