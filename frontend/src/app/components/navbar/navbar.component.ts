@@ -15,16 +15,21 @@ export class NavbarComponent implements AfterViewInit {
   constructor(protected router: Router, private elementRef: ElementRef) { }
 
   ngAfterViewInit(): void {
-    const toggler = this.elementRef.nativeElement.querySelector('input[type="checkbox"]') as HTMLInputElement;
+    const toggler = this.elementRef.nativeElement.querySelector('input[type="checkbox"]') as HTMLInputElement
+    if (window.innerWidth > 992)
+      toggler.tabIndex = -1
     toggler.addEventListener('change', () => this.expanded = toggler.checked);
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
+    const toggler = this.elementRef.nativeElement.querySelector('input[type="checkbox"]') as HTMLInputElement
     if (event.target.innerWidth > 992) {
-      const toggler = this.elementRef.nativeElement.querySelector('input[type="checkbox"]') as HTMLInputElement
       this.expanded = false
       toggler.checked = false
+      toggler.tabIndex = -1
+    } else {
+      toggler.tabIndex = 0
     }
   }
 

@@ -1,5 +1,5 @@
 footer {
-  padding: 1rem var(--container-padding-x-sm);
+  padding: 1rem var(--container-padding-x);
   text-align: center;
 
   >a {
