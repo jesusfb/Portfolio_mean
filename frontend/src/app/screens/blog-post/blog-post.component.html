@@ -1,20 +1,20 @@
-<nav class="post-navbar navbar-on-top">
-  <a class="button" (click)="goBack()">Volver</a>
-  <ul class="badge-list">
-    <li><app-badge>etiqueta1</app-badge></li>
-    <li><app-badge>etiqueta1</app-badge></li>
-    <li><app-badge>etiqueta1</app-badge></li>
-    <li><app-badge>etiqueta1</app-badge></li>
-  </ul>
-</nav>
-<header class="container">
-  <h2>Título del post</h2>
-  <div>
+<header aria-labelledby="post-title" class="container navbar-on-top">
+  <nav aria-label="Navegación de la publicación" class="post-navbar">
+    <a tabindex="0" class="button" (click)="goBack()">Volver</a>
+    <ul aria-label="Etiquetas de la publicación" class="badge-list">
+      <li><app-badge>etiqueta1</app-badge></li>
+      <li><app-badge>etiqueta1</app-badge></li>
+      <li><app-badge>etiqueta1</app-badge></li>
+      <li><app-badge>etiqueta1</app-badge></li>
+    </ul>
+  </nav>
+  <h2 id="post-title">Título del post</h2>
+  <div class="post-info">
     <p>~ AngelMaldonado ~ Actualizado 28 de marzo de 2024</p>
-    <app-stars-rating />
+    <app-stars-rating class="post-info__stars" />
   </div>
 </header>
-<article class="container">
+<article aria-label="Post" class="container">
   <figure>
     <img class="max-img" src="https://placehold.co/600x400">
   </figure>
@@ -26,20 +26,20 @@
   </div>
 </article>
 <hr>
-<section class="comments">
-  <h3>Comentarios (xx)</h3>
-  <form class="user-comment-form">
+<section aria-labelledby="comentarios" class="comments">
+  <h3 id="comentarios">Comentarios (xx)</h3>
+  <form aria-label="Agrega tu comentario" class="user-comment-form">
     <div class="user-pic">
       <img class="max-img" src="https://placehold.co/600x400" alt="avatar">
     </div>
     <fieldset>
-      <label>Deja tu comentario</label>
-      <textarea title="Comentario" name="comment" cols="30" rows="10"></textarea>
+      <label for="comment">Deja tu comentario</label>
+      <textarea name="comment" cols="30" rows="10"></textarea>
       <app-stars-rating class="stars" />
       <button type="submit">Enviar</button>
     </fieldset>
   </form>
-  <ul>
+  <ul aria-label="Lista de comentarios">
     <li>
       <div class="user-pic">
         <img class="max-img" src="https://placehold.co/600x400" alt="user-avatar#">

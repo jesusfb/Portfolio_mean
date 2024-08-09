@@ -3,22 +3,26 @@
 :root {
   /** COLORS **/
   --primary-color-100: #111827;
-  --primary-color-50: #1F2937;
+  --primary-color-50: #1f2937;
   --primary-color-10: #636f7f;
   --highlight-color-100: #EF4444;
+  --landing-tech-card-bg: linear-gradient(0deg, rgb(31, 41, 55, 1) 20%, rgb(17, 24, 39, .3) 100%);
   --white: #fff;
   /** BORDERS **/
   --focus-outline: 1px solid var(--white);
   --focus-border-radius: 2px;
   /** SIZES **/
-  --navbar-height: 7.2rem;
+  --navbar-height: 7.5rem;
   /** PADDINGS **/
-  --container-padding-x-sm: 1.5rem;
-  --container-padding-x-md: 14rem;
-  --container-padding-y-sm: 7.2rem;
-  --container-padding-y-md: 7.2rem;
-  --navbar-padding: var(--container-padding-x-sm) 2rem;
+  --container-padding-x: 1.5rem;
+  --container-padding-y: 7.5rem;
+  --navbar-padding: 1.5rem 2rem;
   --btn-padding: 1rem 2rem;
+  /** SPACERS **/
+  --spacer-1: 2rem;
+  --spacer-2: 4rem;
+  /** TEXT **/
+  --section-text-alignment: center;
   --btn-fs: 1.6rem;
 }
 
@@ -30,7 +34,14 @@
 
 @media (width >=992px) {
   :root {
-    --navbar-padding: var(--container-padding-x-sm) 5rem;
+    --navbar-padding: 1.5rem 5rem;
+    --landing-tech-card-bg: linear-gradient(340deg, rgba(31, 41, 55, 1) 20%, rgba(31, 41, 55, 1) 55%, rgba(17, 24, 39, 0.3) 100%);
+  }
+}
+
+@media (width >=1200px) {
+  :root {
+    --section-text-alignment: start;
   }
 }
 
@@ -57,39 +68,9 @@ body {
 
 /** COMMON **/
 section,
-.landing-section {
-  text-align: center;
-}
-
-.landing-section {
-
-  >h2,
-  >p {
-    max-width: 50rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-section,
 .container {
-  padding: var(--container-padding-y-sm) var(--container-padding-x-sm);
-}
-
-@media (width >=768px) {
-
-  section,
-  .container {
-    padding: var(--container-padding-y-md) var(--container-padding-x-md);
-  }
-}
-
-@media (width >=1200px) {
-
-  section,
-  .container {
-    text-align: start;
-  }
+  text-align: var(--section-text-alignment);
+  padding: var(--container-padding-y) var(--container-padding-x);
 }
 
 .posts-container {
@@ -124,9 +105,15 @@ button,
   font-size: var(--btn-fs);
   transition: color .3s ease, border-color .3s ease;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--highlight-color-100);
     border-color: var(--highlight-color-100);
+  }
+
+  &:focus {
+    outline: var(--focus-outline);
+    border-radius: var(--focus-border-radius);
   }
 }
 
@@ -137,7 +124,7 @@ h1 {
 
 h2 {
   font-size: 4.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacer-1);
 }
 
 h3 {
@@ -158,7 +145,7 @@ p {
 /** UTILITIES **/
 .navbar-on-top {
   margin-top: var(--navbar-height);
-  padding: 4rem var(--container-padding-x-sm) 0 var(--container-padding-x-sm);
+  padding: 4rem var(--container-padding-x) var(--container-padding-y) var(--container-padding-x);
 }
 
 .gradient-bottom {
@@ -182,13 +169,6 @@ p {
 
 .vh-100 {
   height: 100vh;
-}
-
-@media (width >=768px) {
-  .navbar-on-top {
-    padding-left: var(--container-padding-x-md);
-    padding-right: var(--container-padding-x-md);
-  }
 }
 
 /** COMPONENTS **/

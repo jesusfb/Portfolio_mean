@@ -1,10 +1,10 @@
 .landing-project-card {
-  >.landing-project-card__date {
+  .landing-project-card__date {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: var(--spacer-1);
+    margin-bottom: var(--spacer-1);
 
     >svg {
       width: 2.8rem;
@@ -22,15 +22,15 @@
     }
 
     >.content__text {
-      margin-top: 1rem;
+      margin-top: var(--spacer-1);
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: var(--spacer-1);
 
       >p {
         display: -webkit-box;
-        line-clamp: 6;
-        -webkit-line-clamp: 6;
+        line-clamp: 4;
+        -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
       }
@@ -47,7 +47,7 @@
 
     >.landing-project-card__content {
       display: flex;
-      gap: 3rem;
+      gap: var(--spacer-2);
 
       >.content__img {
         width: 100rem;
@@ -60,6 +60,8 @@
         justify-content: space-between;
         text-align: start;
         align-items: start;
+        line-clamp: 6;
+        -webkit-line-clamp: 6;
       }
     }
   }

@@ -1,43 +1,47 @@
 .hero {
-  position: relative;
-
-  >.hero__me {
-    aspect-ratio: 1/1;
-    width: 50%;
+  >img {
+    width: 80%;
     max-width: 25rem;
+    height: auto;
     border-radius: 50%;
-    overflow: hidden;
-    margin: 5rem auto;
+    margin: 5rem 0;
   }
 
   >.hero__info {
     >p {
-      margin-top: 2rem;
+      margin-top: var(--spacer-1);
     }
 
     >.info__icons {
-      height: 26rem;
-      max-width: 39rem;
-      margin-top: 2rem;
-      margin-left: auto;
-      margin-right: auto;
-      bottom: 5rem;
+      height: 28rem;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
       place-items: center;
-      gap: 2rem;
+      row-gap: var(--spacer-2);
+      margin-top: var(--spacer-1);
     }
   }
 }
 
+.landing-section {
+  text-align: center;
+
+  >h2,
+  >p {
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .skills {
-  height: fit-content;
+  height: max-content;
 
   >.skills__container {
-    margin-top: 4rem;
+    margin-top: var(--spacer-2);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: var(--spacer-2);
   }
 }
 
@@ -46,18 +50,31 @@
   justify-content: space-between;
   max-width: 55rem;
   height: 13rem;
-  margin: 2rem auto 0 auto;
+  margin: var(--spacer-1) auto 0 auto;
 }
 
 .experience {
   >ul {
-    margin-top: 4rem;
+    margin-top: var(--spacer-2);
 
     >li {
-      margin-bottom: 4rem;
+      margin-bottom: var(--spacer-2);
 
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (width >=576px) {
+  .hero {
+    >.hero__info {
+      >.info__icons {
+        height: 13rem;
+        display: flex;
+        justify-content: center;
+        gap: var(--spacer-1);
       }
     }
   }
@@ -69,13 +86,7 @@
 
     >.hero__info {
       >.info__icons {
-        display: flex;
-        justify-content: center;
-        gap: 3rem;
-        height: 13rem;
-        max-width: unset;
-        margin-left: 0;
-        margin-right: 0;
+        gap: var(--spacer-2);
       }
     }
   }
@@ -93,19 +104,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 14rem;
-    text-align: start;
+    gap: 12rem;
 
-    >.hero__me {
+    >img {
       margin: 0;
-      max-width: 30%;
+      width: 30%;
+      max-width: 40rem;
     }
 
     >.hero__info {
       max-width: 50rem;
 
       >p {
-        margin-bottom: 2rem;
+        margin-bottom: var(--spacer-1);
       }
 
       >.info__icons {
