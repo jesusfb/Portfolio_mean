@@ -1,16 +1,26 @@
-.post-navbar {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-
-  >.button {
-    width: fit-content;
-  }
-}
-
 header {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: var(--spacer-1);
+  padding-bottom: var(--spacer-1);
+
+  >.post-navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: var(--spacer-1);
+    margin-bottom: var(--spacer-1);
+
+    >.button {
+      width: fit-content;
+    }
+  }
+
+  >.post-info {
+    >.post-info__stars {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
 }
 
 article {
@@ -26,21 +36,21 @@ article {
   }
 
   >.content {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: var(--spacer-1);
+    margin-bottom: var(--spacer-1);
   }
 }
 
 hr {
-  margin: var(--container-padding-y-sm) var(--container-padding-x-sm)
+  margin: var(--container-padding-y) var(--container-padding-x)
 }
 
 .user-comment-form {
-  margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-top: var(--spacer-1);
+  margin-bottom: var(--spacer-2);
 
   >fieldset {
-    margin-top: 2rem;
+    margin-top: var(--spacer-1);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -63,8 +73,8 @@ hr {
     >li {
       text-align: start;
       display: flex;
-      gap: 2rem;
-      margin: 2.8rem 0;
+      gap: var(--spacer-1);
+      margin: var(--spacer-2) 0;
 
       >.user-pic {
         width: 5rem;
@@ -76,24 +86,22 @@ hr {
       &:last-child {
         margin-top: 0;
       }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
 
-@media (width >=768px) {
-  .post-navbar {
-    flex-direction: row;
-    align-items: center;
-    padding-left: var(--container-padding-x-md);
-    padding-right: var(--container-padding-x-md);
-  }
-
-  hr {
-    margin: var(--container-padding-y-md) var(--container-padding-x-md)
-  }
-}
-
 @media (width >=992px) {
+  header {
+    >.post-navbar {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
   .comments {
     text-align: start;
   }
@@ -107,7 +115,7 @@ hr {
       position: relative;
       transform: translateY(-25%);
       margin-top: 0;
-      margin-left: 2rem;
+      margin-left: var(--spacer-1);
       width: 82%;
       display: inline-flex;
       flex-direction: column;
@@ -118,10 +126,7 @@ hr {
       }
 
       >.stars {
-        margin: 0;
-        margin-top: 1rem;
-        margin-left: auto;
-        margin-right: 10rem;
+        margin: 1rem 10rem auto 0;
       }
 
       >button {
@@ -136,10 +141,10 @@ hr {
 
 @media (width >=1200px) {
   header {
-    >div {
+    >.post-info {
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: var(--spacer-1);
     }
   }
 }
