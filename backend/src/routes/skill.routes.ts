@@ -12,8 +12,10 @@ class SkillRoutes {
   }
 
   private Init() {
+    this.router.get("/", this.skillController.All.bind(this.skillController))
     this.router.post("/", this.skillController.Create.bind(this.skillController))
-    this.router.get("/", (req, res) => res.send("Hello from Skill Routes"))
+    this.router.put("/", this.skillController.UpdateOne.bind(this.skillController))
+    this.router.delete("/", this.skillController.DeleteOne.bind(this.skillController))
   }
 }
 
