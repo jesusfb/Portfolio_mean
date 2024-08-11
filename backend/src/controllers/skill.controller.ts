@@ -36,7 +36,7 @@ class SkillController {
 
   async DeleteOne(req: Request, res: Response) {
     try {
-      const skill = await Skill.findByIdAndDelete(req.body._id)
+      const skill = await Skill.findByIdAndDelete(req.params.id)
       if (skill != null) {
         res.status(200).send(skill)
       }

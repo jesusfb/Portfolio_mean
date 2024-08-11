@@ -15,7 +15,7 @@ class SkillRoutes {
     this.router.get("/", this.skillController.All.bind(this.skillController))
     this.router.post("/", this.skillController.Create.bind(this.skillController))
     this.router.put("/", this.skillController.UpdateOne.bind(this.skillController))
-    this.router.delete("/", this.skillController.DeleteOne.bind(this.skillController))
+    this.router.delete("/:id", this.skillController.DeleteOne.bind(this.skillController))
   }
 }
 

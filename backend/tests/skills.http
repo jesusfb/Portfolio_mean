@@ -1,0 +1,28 @@
+### Create
+
+post {{hostname}}/api/skills
+Content-Type: application/json
+
+{
+  "name": "JavaScript",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+}
+
+### All
+
+get {{hostname}}/api/skills
+
+### Update one
+
+put {{hostname}}/api/skills
+Content-Type: application/json
+
+{
+  "_id": "66b81a2723ad8551ecabe53a",
+  "name": "otro",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+}
+
+### Delete one
+
+delete {{hostname}}/api/skills/66b81a2723ad8551ecabe53a
