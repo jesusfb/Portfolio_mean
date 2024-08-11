@@ -1,2 +1,6 @@
 .env
 node_modules/
+dist/
+tests/.vscode/
+.vscode/*
+!.vscode/settings.example.json

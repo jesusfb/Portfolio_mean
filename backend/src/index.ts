@@ -1,15 +1,4 @@
-const express = require('express')
-const dotenv = require('dotenv')
+import App from './app'
 
-dotenv.config()
-
-const app = express()
-const port = process.env.PORT
-
-app.get('/', (req: any, res: any) => {
-    res.send('Express server is running!')
-})
-
-app.listen(port, () => {
-    console.log(`[server] Server is running at http://localhost:${port}`)
-})
+const app = new App()
+app.Start()

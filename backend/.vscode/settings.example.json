@@ -1,0 +1,8 @@
+{
+  "rest-client.environmentVariables": {
+    "$shared": {},
+    "Local Env": {
+      "hostname": "your-local-hostname"
+    }
+  }
+}
